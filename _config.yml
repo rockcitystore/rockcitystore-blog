@@ -7,8 +7,8 @@ title: 石城商场
 subtitle:
 description: 源于90年代家门口的国营商店
 author: zhu1939@gmail.com
-language:CHN
-timezone:SHANGHAI
+language: CHN
+timezone: SHANGHAI
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
