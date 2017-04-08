@@ -2,7 +2,7 @@
 title: NAN_node-addon-examples笔记
 ---
 
-原文链接: [原文链接](https://github.com/nodejs/node-addon-examples/blob/master/1_hello_world/README.md)
+github链接: [node-addon-examples](https://github.com/nodejs/node-addon-examples/blob/master/1_hello_world/README.md)
 
 ####工作步骤
 1 `npm init` 在项目根目录初始化 
