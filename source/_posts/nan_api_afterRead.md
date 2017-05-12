@@ -4,7 +4,7 @@ title: NAN_node-addon-examples笔记
 
 github链接: [node-addon-examples](https://github.com/nodejs/node-addon-examples/blob/master/1_hello_world/README.md)
 
-####工作步骤
+#### 工作步骤
 1 `npm init` 在项目根目录初始化 
 2 `npm install nan@latest --save` ,`npm install node-gyp -g`
 3 添加`"gypfile": true`至`package.json`，在项目根目录新建`binding.gyp` （YAML格式）
@@ -13,7 +13,7 @@ github链接: [node-addon-examples](https://github.com/nodejs/node-addon-example
 6 编写`helloworld.js`
 
 
-####NAN_METHOD
+#### NAN_METHOD
 ```
 NAN_METHOD(Method) {
   NanScope();

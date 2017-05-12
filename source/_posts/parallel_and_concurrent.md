@@ -3,8 +3,8 @@ title: 并行计算与并发计算
 ---
 
 [toc]
-##并行计算与并发计算
-####概念
+## 并行计算与并发计算
+#### 概念
 - [Parallel_computing](https://en.wikipedia.org/wiki/Parallel_computing)
 
 
