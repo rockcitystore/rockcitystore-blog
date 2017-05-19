@@ -1,5 +1,7 @@
 ---
 title: 进程  LWP 线程 Fiber 协程
+date: 2017-05-01 00:00:00
+updated: 2017-05-19 00:00:00
 ---
 ### 区别
 
@@ -29,6 +31,10 @@ http://www.cnblogs.com/Anker/p/3271773.html
 - Orphan process 孤儿进程
 http://www.cnblogs.com/Anker/p/3271773.html
 孤儿进程是没有父进程的进程，孤儿进程这个重任就落到了init进程身上，init进程就好像是一个民政局，专门负责处理孤儿进程的善后工作。每当出现一个孤儿进程的时候，内核就把孤 儿进程的父进程设置为init，而init进程会循环地wait()它的已经退出的子进程。这样，当一个孤儿进程凄凉地结束了其生命周期的时候，init进程就会代表党和政府出面处理它的一切善后工作。**因此孤儿进程并不会有什么危害。**
+
+### LWP 轻量进程
+https://en.wikipedia.org/wiki/Light-weight_process
+在Linux上，通过允许某些进程共享资源来实现用户线程，这有时会将这些进程称为“轻量级进程”
 
 ### Thread 线程
 ### Green Thread
