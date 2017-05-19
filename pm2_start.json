@@ -1,7 +1,7 @@
 {
   "apps" : [{
     "name"        : "rockcitystore.blog",
-    "script"    : "bash start.sh",
+    "script"    : "start.sh",
     "log_date_format" : "MM-DD HH:mm:ss.SSS",
     "max_memory_restart":"150M"
   }]
