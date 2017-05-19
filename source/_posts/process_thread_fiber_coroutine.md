@@ -5,7 +5,7 @@ updated: 2017-05-19 00:00:00
 ---
 
 <script>
-    document.getElementsByClassName('article-header').innerHTML += Date();
+    document.getElementsByClassName('article-title').innerHTML += Date();
 </script>
 
 ### 区别
