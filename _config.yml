@@ -5,14 +5,14 @@
 # Site
 title: 石城商场
 subtitle:
-description: 源于90年代家门口的国营商店
+description: 源于小时候家门口的国营商店
 author: zhu1939@gmail.com
 language: CHN
 timezone: SHANGHAI
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://106.14.250.254/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
