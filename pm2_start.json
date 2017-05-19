@@ -1,7 +1,7 @@
 {
   "apps" : [{
     "name"        : "rockcitystore.blog",
-    "script"    : "hexo server",
+    "script"    : "bash start.sh",
     "log_date_format" : "MM-DD HH:mm:ss.SSS",
     "max_memory_restart":"150M"
   }]
