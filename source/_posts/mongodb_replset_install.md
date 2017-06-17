@@ -5,15 +5,15 @@ updated: 2017-06-17 15:00:00
 ---
 
 
-##安装
+## 安装
 [Install MongoDB Community Edition From Tarball](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/)
 
 
-####解压 配置储存目录
+#### 解压 配置储存目录
 ```
 mkdir -p /opt/logs/mongodb/ /opt/mongodb_store /opt/software && cd /opt/software/ && tar -zxvf mongodb-linux-x86_64-3.4.5.tgz
 ```
-####添加开机执行
+#### 添加开机执行
 在 `/etc/rc.local`增加一行
 ```
 # This script will be executed *after* all the other init scripts.  
@@ -24,15 +24,15 @@ mkdir -p /opt/logs/mongodb/ /opt/mongodb_store /opt/software && cd /opt/software
 bash /opt/software/mongod_start
 ```
 
-####启动脚本内容mongod_start
+#### 启动脚本内容mongod_start
 ```
 #! /bin/bash  
 mongod --dbpath /opt/mongodb_store --replSet ads_mongodb_repl --logpath /opt/logs/mongodb/mongod.log --fork --auth --keyFile /opt/software/mongodb_keyFile
 #mongod --config /opt/software/mongod.conf
 ```
-####将启动脚步放在`/opt/software/mongod_start`
+#### 将启动脚步放在`/opt/software/mongod_start`
 
-####配置环境变量
+#### 配置环境变量
 
 ```
 在`/etc/profile`增加一行`export PATH=/opt/software/mongodb-linux-x86_64-3.4.5/bin/:$PATH`
@@ -42,8 +42,8 @@ mongod --dbpath /opt/mongodb_store --replSet ads_mongodb_repl --logpath /opt/log
 
 
 
-##权限配置
-####生产key
+## 权限配置
+#### 生产key
 在219上
 ```
 openssl rand -base64 756 > /opt/software/mongodb_keyFile
@@ -51,7 +51,7 @@ chmod 400 /opt/software/mongodb_keyFile
 scp -r mongodb_keyFile root@10.37.134.220:/opt/software/
 scp -r mongodb_keyFile root@10.37.134.221:/opt/software/
 ```
-####添加用户
+#### 添加用户
 在 PRIMARY 执行 mongo
 ```
 // root
@@ -70,20 +70,20 @@ db.getSiblingDB("ads_test").createUser({user:"ads_test", pwd:"LN<>.G*&!@|", role
 db.getSiblingDB("ads_test").auth("ads_test", "LN<>.G*&!@|" )
 ```
 
-####ads 登录
+#### ads 登录
 mongo -u ads -p LN\<\>\.G\*\&\!\@\| --authenticationDatabase "ads"
-####admin 登录
+#### admin 登录
 mongo -u admin -p JKSXD\:\?\%\!\@\# --authenticationDatabase "admin"
-####root 登录
+#### root 登录
 mongo -u root -p JUnjkad1\|\>\L --authenticationDatabase "admin"
 
 
 
 
-##集群配置
+## 集群配置
 [集群配置](https://www.mtyun.com/library/43/MongoDB-high-availability/)
 http://www.jianshu.com/p/2a06f7f81814
-####初始化集群
+#### 初始化集群
 在219上执行 随后自提升为PRIMARY
 
 ```
@@ -98,21 +98,21 @@ _id:"ads_mongodb_repl",
 ```
 
 
-##初始化
-####添加collection
+## 初始化
+#### 添加collection
 `db.createCollection("project")`
 `db.createCollection("user")`
 
 
 
-##常用命令
+## 常用命令
 
 
 #### start
 `#sudo service mongod start`
 `bash /opt/software/mongod_start`
 
-####查看进程
+#### 查看进程
 `ps -ef | grep mongo | grep -v grep`
 
 #### config
@@ -128,7 +128,7 @@ _id:"ads_mongodb_repl",
 #### stop
 `sudo service mongod stop`
 
-####编辑索引
+#### 编辑索引
 `db.collection.reIndex()`
 `sudo service mongod restart`
 
