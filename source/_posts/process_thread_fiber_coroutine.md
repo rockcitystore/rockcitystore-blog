@@ -35,9 +35,22 @@ http://www.cnblogs.com/Anker/p/3271773.html
 
 ### LWP 轻量进程
 https://en.wikipedia.org/wiki/Light-weight_process
-在Linux上，通过允许某些进程共享资源来实现用户线程，这有时会将这些进程称为“轻量级进程”
+**在Linux上，通过允许某些进程共享资源来实现用户线程，这有时会将这些进程称为“轻量级进程”。** 与普通进程相比，LWP与其他进程共享所有（或大部分）它的逻辑地址空间和系统资源；与线程相比，LWP有它自己的进程标识符，并和其他进程有着父子关系；
 
 ### Thread 线程
+https://en.wikipedia.org/wiki/Thread_(computing)
+多个线程可以存在于一个进程中，并发执行并共享诸如内存的资源，而不同的进程不共享这些资源。特别是，线程间在任何时间共享其可执行代码及其变量的值。
+
+- libuv Thread pool 
+http://docs.libuv.org/en/latest/threadpool.html
+
+
+- User-level threads ULT 用户态线程
+http://blog.csdn.net/tianyue168/article/details/7403693
+
+- Kernel-level thread 内核态线程
+http://blog.csdn.net/tianyue168/article/details/7403693
+
 ### Green Thread
 ### Fiber
 ### Coroutine 协程
